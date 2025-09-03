@@ -1,0 +1,83 @@
+---
+alwaysApply: false
+description: Agent session branch management workflow
+---
+
+# Agent Session Branch Management
+
+When starting a new agent session, follow this git workflow to maintain clean version control and enable easy collaboration:
+
+## Session Start Protocol
+
+1. **Check current branch status:**
+   ```bash
+   git status
+   git branch
+   ```
+
+2. **Create temporary session branch:**
+   ```bash
+   git checkout -b agent-session-$(date +%Y%m%d-%H%M%S)
+   ```
+
+3. **Confirm branch creation:**
+   ```bash
+   git branch
+   ```
+
+## Session Workflow
+
+- Make all changes on the temporary branch
+- Commit changes regularly with descriptive messages
+- Use conventional commit format: `feat:`, `fix:`, `docs:`, `refactor:`, etc.
+
+## Session End Protocol
+
+1. **Review all changes:**
+   ```bash
+   git log --oneline
+   git diff main..HEAD
+   ```
+
+2. **Offer merge options to user:**
+   - Merge back to original branch
+   - Create pull request
+   - Keep as separate branch
+   - Discard changes
+
+3. **If merging back:**
+   ```bash
+   git checkout [original-branch]
+   git merge agent-session-[timestamp]
+   git branch -d agent-session-[timestamp]
+   ```
+
+## Branch Naming Convention
+
+- Format: `agent-session-YYYYMMDD-HHMMSS`
+- Example: `agent-session-20250903-143022`
+- Include session purpose if relevant: `agent-session-20250903-143022-tennis-scraper`
+
+## Benefits
+
+- **Clean history:** Each session is isolated
+- **Easy rollback:** Can discard entire session if needed
+- **Collaboration:** Others can review changes before merge
+- **Experimentation:** Safe to try different approaches
+- **Documentation:** Clear record of what was done when
+
+## Integration with Existing Workflow
+
+This rule works alongside existing git workflows and doesn't interfere with:
+- Feature branches
+- Release branches
+- Hotfix branches
+- Pull request workflows
+
+## User Interaction
+
+Always inform the user about:
+- Current branch status at session start
+- Branch creation confirmation
+- Available merge options at session end
+- Any conflicts or issues that arise
