@@ -1,0 +1,25 @@
+---
+description: Advanced TDD techniques
+globs:
+alwaysApply: false
+---
+
+**Apply when:** User asks for detailed TDD guidance or advanced testing strategies.
+
+## Advanced TDD Techniques
+- Mock dependencies for isolated testing
+- Use test doubles (stubs, spies, mocks)
+- Property-based testing for edge cases
+- Test pyramids: unit > integration > e2e
+
+## TDD Patterns
+- Arrange-Act-Assert pattern
+- Given-When-Then for BDD
+- Test data builders for complex objects
+- Parameterized tests for multiple scenarios
+
+## Testing Strategies
+- Outside-in TDD (start with acceptance tests)
+- Inside-out TDD (start with unit tests)
+- Test-driven refactoring
+- Legacy code testing techniques

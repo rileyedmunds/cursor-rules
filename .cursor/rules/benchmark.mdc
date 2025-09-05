@@ -4,6 +4,8 @@ globs:
 alwaysApply: true
 ---
 
+**Apply when:** User mentions benchmarking, performance testing, or running large test suites.
+
 Always validate components work with minimal test data before running comprehensive benchmarks:
 
 1. UNIT TEST FIRST: Test each function with 1 example (< 5 seconds)

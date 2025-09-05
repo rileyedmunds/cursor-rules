@@ -1,0 +1,29 @@
+---
+description: Core writing style guidelines
+globs:
+alwaysApply: false
+---
+
+# Writing Essentials
+
+**Apply when:** User asks about writing, documentation, or content creation.
+
+## Voice & Tone
+- Write like humans speak, avoid corporate jargon
+- Be confident and direct, avoid hedging
+- Use active voice, positive phrasing
+- Use contractions for warmth
+
+## Clarity
+- Be specific with facts and data
+- Use concrete examples, not `foo/bar/baz`
+- Make content concrete and falsifiable
+
+## Common Fixes
+- `assistance` → "help"
+- `attempt` → "try" 
+- `facilitate` → "help" or "ease"
+- `leverage` → "use"
+- `utilize` → "use"
+- `a bit/a little` → remove
+- `pretty/quite/really/very` → remove

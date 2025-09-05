@@ -1,0 +1,30 @@
+---
+description: Essential Git workflow practices
+globs:
+alwaysApply: false
+---
+
+# Git Workflow Essentials
+
+**Apply when:** User asks about Git, commits, branches, or version control.
+
+## Core Principles
+- Always work on feature/topic branches, never commit directly to main
+- Use descriptive branch names: `feature/user-auth`, `bugfix/login-error`, `chore/update-deps`
+- Write clear commit messages in present tense: `feat: add user login`
+- Run tests before every commit
+- Use `git switch` and `git restore` (modern alternatives to checkout)
+
+## Branch Naming
+- `feature/description` - new features
+- `bugfix/description` - bug fixes  
+- `chore/description` - maintenance tasks
+- `test/description` - test-focused changes
+
+## Commit Message Format
+```
+type(scope): description
+
+Types: feat, fix, test, refactor, docs, style, perf, chore
+Example: feat(auth): implement JWT validation
+```

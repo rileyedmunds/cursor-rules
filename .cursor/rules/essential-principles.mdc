@@ -1,0 +1,31 @@
+---
+description: Essential development principles
+globs:
+alwaysApply: true
+---
+
+# Essential Development Principles
+
+**Apply when:** Working on any code, Git operations, or development tasks.
+
+## Core Approach
+- Write clean, readable code
+- Use meaningful names for variables and functions
+- Break complex problems into smaller parts
+- Ask clarifying questions when requirements are unclear
+
+## Default TDD Workflow
+1. **Red**: Write failing test first
+2. **Green**: Write minimal code to pass test
+3. **Refactor**: Improve code while keeping tests green
+
+## Testing Requirements
+- ALL TESTS MUST PASS before committing
+- Start with the test, not the implementation
+- Test edge cases and error conditions
+- One logical change per commit
+
+## Safety First
+- Avoid data loss in Git operations
+- Keep commits atomic and focused
+- Use descriptive commit messages
